@@ -1,12 +1,14 @@
     /*****************************************************************************************************
     -->  Codigo-fonte "MEMOD.A"
-    -->  Jogo da memoria com a tematica "Curso de Sistemas de Informação na UNIFEI", onde você se passará por um calouro(a) de Sistemas de Informação, na Universidade Federal de Itajubá
+    -->  Jogo da memoria com a tematica "Curso de Sistemas de Informação na UNIFEI", 
+    onde você se passará por um calouro(a) de Sistemas de Informação, na Universidade Federal de Itajubá
     E para se enturmar, você decidiu fazer as provas temáticas das matérias do seu primeiro semestre, essas matérias serão:
         - Projeto Integrado (SAHC04)
         - Administração Aplicada (IEPG22)
         - Fundamentos de Sistemas de Informação (SAHC05)
     Porém, você quer ir para o famoso D.A, o Bar Cultural da Unifei, e seu ânimo para ir a festa dependerá do resultado dessas provas!
-    --> Desenvolvido durante o curso de "XDES01 - Fundamentos de Programação", na Unifei, no semestre 2022.1
+    --> Desenvolvido durante o curso de "XDES01 - Fundamentos de Programação", na Unifei, no semestre 2022.1, que tem por objetivo
+    o desenvolvimento de um jogo para o teste dos conhecimentos básicos da linguagem C, como printar mensagens, estruturas condicionais, laços de repetiçao, etc.
     --> Ultima Atualização: 19/07/2022
 
     *****************************************************************************************************/
@@ -26,8 +28,6 @@
     void fase3 ();
     void telafinal();
     void tela_final (int acertos, int erros);
-
-
 
     /*************************
 
@@ -188,8 +188,7 @@ void fase1 () {
         printf ("\n\n    || Tempo restante: %d", t1);
         Sleep (1000);
         t1--;
-    }
-    while (t1 > 0);
+    } while (t1 > 0);
 
     //Comando para limpar o terminal
     system ("cls");
@@ -279,10 +278,7 @@ void fase1 () {
         erros ++;
         }
 
-
         //Estrutural condicional para averiguar se o jogador acertou ou errou a questão
-
-
         printf ("\n\n      || Pressione qualquer tecla para continuar");
         getch ();
         system ("cls");
@@ -343,15 +339,14 @@ void fase1 () {
         printf ("\n\n\n                                 Digite o numero da alternativa correta");
         printf ("\n\n\n                                                   ");
         scanf ("%d", &respostasp2[0]);
+        
+        //Estrutural condicional para averiguar se o jogador acertou ou errou a questão
         if (respostasp2[0] == numerosc[0]){
             acertos++;
         } else {
         erros ++;
         }
-
-        //Estrutural condicional para averiguar se o jogador acertou ou errou a questão
-
-
+        
         printf ("\n\n      || Pressione qualquer tecla para continuar");
         getch ();
         system ("cls");
@@ -551,10 +546,9 @@ void fase1 () {
         getch ();
         system ("cls");
         tela_final(acertos, erros);
-
-
     }
 
+    //Função para printar a tela final do jogo com seu número de acertos e erros + a tela de créditos
     void telafinal(){
 
             printf ("------------------------------------------------------------------------------------------------------------------------");
